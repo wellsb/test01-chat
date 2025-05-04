@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    <link rel="stylesheet" href="client.css">
+    <link rel="icon" href="favicon.ico" sizes="any"> <!-- Traditional favicon -->
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+    <div id="container">
+        <form id="tts-controls-form">
+            <div id="tts-controls">
+                <div>
+                    <input type="checkbox" id="tts-enable" checked>
+                    <label for="tts-enable">Enable Speech</label>
+                </div>
+                <div>
+                    <label for="tts-voice">Voice:</label>
+                    <select id="tts-voice"></select>
+                </div>
+                <div>
+                    <label for="tts-rate">Rate:</label>
+                    <input type="number" id="tts-rate" min="0.1" max="10" step="0.1" value="0.7">
+                    <span id="tts-rate-value">0.7</span>
+                </div>
+                <div>
+                    <label for="tts-pitch">Pitch:</label>
+                    <input type="number" id="tts-pitch" min="0" max="2" step="0.1" value="1">
+                    <span id="tts-pitch-value">1</span>
+                </div>
+                <!-- Optional: Button to test the current settings -->
+                <button type="button" id="tts-test-button">Test Voice</button>
+            </div>
+        </form>
+        <form id="message-form">
+            <input id="message-input" type="text" placeholder="Type your message..." value="test">
+            <button>Send</button>
+        </form>
+
+        <div id="messageContainer"></div>
+    </div>
+
+    <script type="module" src="node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script type="module" src="ws_client.js"></script>
+</body>
+</html>

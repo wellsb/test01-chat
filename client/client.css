@@ -1,0 +1,98 @@
+:root {
+    --highlight-color: yellow; /* Store the color */
+    --default-accent-color: #007bff;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+#messageContainer {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+#message-form {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#tts-controls-form {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#message-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#message-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--default-accent-color);
+    color: white;
+    cursor: pointer;
+}
+
+#message-form button:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f1f1f1;
+    transition: background-color 1s ease; /* fade */
+}
+
+.highlight {
+    background-color: var(--default-accent-color);
+}
+
+.sender {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #007bff;
+    align-self: flex-start;
+}
+
+.message-text {
+    flex: 1;
+    color: #333;
+    word-wrap: break-word;
+}
+
+.timeStamp {
+    font-size: 1em;
+    padding-right: 0.2em;
+}
