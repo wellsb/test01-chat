@@ -347,7 +347,6 @@ socket.on('aMessage', (msg) => {
   if (textToSpeak) { // Only speak if there's a message
     speakText(textToSpeak); // speakText now checks the enable checkbox internally
   }
-  // --------------------------------
 
   // --- Visual Feedback & Scroll ---
   messageRow.classList.add("highlight");
@@ -357,8 +356,6 @@ socket.on('aMessage', (msg) => {
 
   messageContainer.scrollTop = messageContainer.scrollHeight;
 });
-
-// --- Utility Functions (getTimestamp, generateHexColor) ---
 
 /**
  * Generates the current timestamp in "HH:MM" format.
